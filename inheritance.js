@@ -45,15 +45,11 @@ class watch extends MyProducts {
     }
 }
 // modem class 
-class modem {
-    name;
-    weight = '2kg';
-    price = 50000;
-    from = 'USA'
-    constructor(name, price){
-        this.name = name;
-        this.price = price;
-
+class modem extends MyProducts {
+    memorySupported;
+    constructor (name, price, memory){
+        super(name, price)
+        this.memorySupported = memory;
     }
     myFunction(version){
         console.log(this.name, 'yeah! I am release', version);
@@ -69,5 +65,8 @@ class modem {
 // myPhone.myFunction('1.3.4')
 // console.log(myPhone);
 // watch
-const myWatch = new watch('apple', 20000, 'black');
-console.log(myWatch);
+// const myWatch = new watch('apple', 20000, 'black');
+// console.log(myWatch);
+// modem 
+const myModem = new modem('GP', 3000, '64bg');
+console.log(myModem);
