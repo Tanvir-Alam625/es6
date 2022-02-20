@@ -34,15 +34,11 @@ class phone extends MyProducts {
     }
 }
 // watch class 
-class watch {
-    name;
-    weight = '2kg';
-    price = 50000;
-    from = 'USA'
-    constructor(name, price){
-        this.name = name;
-        this.price = price;
-
+class watch extends MyProducts {
+    color;
+    constructor(name, price ,color){
+        super(name, price)
+        this.color = color;
     }
     myFunction(version){
         console.log(this.name, 'yeah! I am release', version);
@@ -69,6 +65,9 @@ class modem {
 // myLaptop.myFunction('12.23.2')
 // console.log(myLaptop);
 //phone 
-const myPhone = new phone('samsung', 12000, 'green');
-console.log(myPhone);
-
+// const myPhone = new phone('samsung', 12000, 'green');
+// myPhone.myFunction('1.3.4')
+// console.log(myPhone);
+// watch
+const myWatch = new watch('apple', 20000, 'black');
+console.log(myWatch);
